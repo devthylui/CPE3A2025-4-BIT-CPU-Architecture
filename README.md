@@ -54,5 +54,4 @@ The CPU supports a 16-instruction set. Below is the summary of the architectural
 
 ---
 
-**Status**: Academic Portfolio Project  
 **Implementation**: Verilog HDL
