@@ -1,19 +1,21 @@
-# CPE3A2025 4-BIT CPU ARCHITECTURE
+# CPE3A2025 4-Bit CPU Architecture
 
-This repository contains the full design, implementation, and verification suite for the **CPE3A2025**, a custom 4-bit CPU architecture. Developed in March 2025, this project features a 12-bit instruction word designed for efficient arithmetic, logical, and control flow operations.
+This repository contains the full design, implementation, and verification suite for the **CPE3A2025**, a custom 4-bit CPU architecture. Developed as part of a comprehensive digital design portfolio, this project features a 12-bit instruction word designed for efficient arithmetic, logical, and control flow operations.
 
 ---
 
 ## Project Overview
 
-The **CPE3A2025** is a Hardware Description Language (HDL) implementation of a microprocessor. It uses a dedicated 8-bit **Working Register (W)** for data manipulation and a 5-bit addressing scheme for memory-mapped operations. The digital logic design was synthesized and physically implemented on an **Intel Cyclone IV E** FPGA.
+The **CPE3A2025** is a Hardware Description Language (HDL) implementation of a microprocessor. It uses a dedicated 8-bit **Working Register (W)** for data manipulation and a 5-bit addressing scheme for memory-mapped operations.
+
+The digital logic design was synthesized and physically implemented on an **Intel Cyclone IV E** FPGA. During hardware testing, stable physical execution was achieved by operating the CPU at **10 Hz**, which was implemented using a custom Verilog clock divider module to step down the board's native clock.
 
 ### Key Specifications
 * **Instruction Width**: 12 bits (4-bit Opcode, 8-bit/5-bit Operand).
 * **Registers**: 8-bit Working Register (W).
 * **Addressing**: 5-bit Memory Address (up to 32 locations).
 * **Clock Cycles**: Variable timing (2 to 5 cycles per instruction).
-* **Hardware Target**: Intel Cyclone IV E FPGA.
+* **Hardware Target**: Intel Cyclone IV E FPGA (Operated at 10 Hz via clock divider).
 
 ---
 
@@ -44,9 +46,9 @@ The CPU supports a 16-instruction set. Below is the summary of the architectural
 
 ## Repository Contents
 
-* **`/hdl`**: Verilog source files (`.v`) for the CPU core, ALU, and Control Unit.
+* **`/hdl`**: Verilog source files (`.v`) for the CPU core, ALU, Control Unit, and clock divider.
 * **`/rtl`**: RTL schematics and structural block diagrams.
-* **`/testbench`**: Functional verification scripts and test vectors.
+* **`/testbench`**: Functional verification scripts (ModelSim compatible) and test vectors.
 * **`/docs`**: Full datasheet, timing diagrams, and instruction set reference.
 * **`/quartus`**: Intel Quartus Prime project files and Synthesis reports.
 * **`/constraints`**: Pin assignment files (`.qsf`) for the Cyclone IV E board.
@@ -54,4 +56,5 @@ The CPU supports a 16-instruction set. Below is the summary of the architectural
 
 ---
 
-**Implementation**: Verilog HDL
+**Hardware Description Language**: Verilog  
+**Project Category**: Programmable Logic Device (PLD) / FPGA Design Portfolio
