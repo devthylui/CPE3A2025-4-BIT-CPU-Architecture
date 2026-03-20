@@ -57,4 +57,4 @@ The CPU supports a 16-instruction set. Below is the summary of the architectural
 ---
 
 **Hardware Description Language**: Verilog  
-**Project Category**: Programmable Logic Device (PLD) / FPGA Design Portfolio
+**Project Category**: Programmable Logic Device (PLD) / FPGA Design
